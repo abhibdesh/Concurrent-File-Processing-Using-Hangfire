@@ -1,0 +1,26 @@
+[2026-03-17 18:20:40,842] [INFO] [1] Now listening on: https://localhost:7134
+[2026-03-17 18:20:40,863] [INFO] [1] Now listening on: http://localhost:5035
+[2026-03-17 18:20:40,938] [INFO] [1] Starting Hangfire Server using job storage: 'Connection string: hangfire.db,  prefix: hangfire'
+[2026-03-17 18:20:40,942] [INFO] [1] Using the following options for LiteDB job storage:
+[2026-03-17 18:20:40,945] [INFO] [1] Using the following options for Hangfire Server:
+    Worker count: 3
+    Listening queues: 'default'
+    Shutdown timeout: 00:00:15
+    Schedule polling interval: 00:00:15
+[2026-03-17 18:20:40,980] [INFO] [1] Application started. Press Ctrl+C to shut down.
+[2026-03-17 18:20:40,986] [INFO] [1] Hosting environment: Development
+[2026-03-17 18:20:40,990] [INFO] [1] Content root path: C:\FYJIXFINAL\UAT\Hangfire
+[2026-03-17 18:20:41,186] [INFO] [BackgroundServerProcess #1] Server nutglp-1120:9308:abfeec0c successfully announced in 208.1958 ms
+[2026-03-17 18:20:41,197] [INFO] [BackgroundServerProcess #1] Server nutglp-1120:9308:abfeec0c is starting the registered dispatchers: ServerWatchdog, ServerJobCancellationWatcher, ExpirationManager, CountersAggregator, Worker, DelayedJobScheduler, RecurringJobScheduler...
+[2026-03-17 18:20:41,238] [INFO] [BackgroundServerProcess #1] Server nutglp-1120:9308:abfeec0c all the dispatchers started
+[2026-03-17 18:20:55,857] [INFO] [29] File uploaded successfully: AML_FILE_20260317_182055.csv
+[2026-03-17 18:20:56,029] [INFO] [29] State: Enqueued
+[2026-03-17 18:20:56,031] [INFO] [29] File uploaded successfully: AML_FILE_20260317_182055.csv
+[2026-03-17 18:21:07,698] [INFO] [30] File uploaded successfully: AML_FILE_20260317_182107.csv
+[2026-03-17 18:21:07,710] [INFO] [30] State: Enqueued
+[2026-03-17 18:21:07,711] [INFO] [30] File uploaded successfully: AML_FILE_20260317_182107.csv
+[2026-03-17 18:24:56,682] [INFO] [35] Queue: default, Length: 0
+[2026-03-17 18:24:56,696] [INFO] [35] File moved to backup: C:\FYJIXFINAL\UAT\Hangfire\wwwroot/Backups\AML_FILE_20260317_182055.csv
+[2026-03-17 18:25:11,598] [INFO] [35] Queue: default, Length: 0
+[2026-03-17 18:25:11,607] [INFO] [35] File moved to backup: C:\FYJIXFINAL\UAT\Hangfire\wwwroot/Backups\AML_FILE_20260317_182107.csv
+[2026-03-17 18:25:41,285] [INFO] [ServerWatchdog #1] 1 servers were removed due to timeout

@@ -1,0 +1,456 @@
+[2026-03-18 21:33:12,172] [INFO] [27] === [UPLOAD] datasubmit_Click triggered ===
+[2026-03-18 21:33:12,190] [INFO] [27] [HANGFIRE-MONITOR | PRE-UPLOAD] Queue count: 1
+[2026-03-18 21:33:12,192] [INFO] [27] [HANGFIRE-MONITOR | PRE-UPLOAD] Queue='default' | Length=2
+[2026-03-18 21:33:12,195] [INFO] [27] [HANGFIRE-MONITOR | PRE-UPLOAD] Enqueued jobs (default, top 10): 2
+[2026-03-18 21:33:12,207] [INFO] [27] [HANGFIRE-MONITOR | PRE-UPLOAD] JobId='11' | State='Enqueued' | Created='18-03-2026 16:03:02'
+[2026-03-18 21:33:12,209] [INFO] [27] [HANGFIRE-MONITOR | PRE-UPLOAD] JobId='14' | State='Enqueued' | Created='18-03-2026 16:03:02'
+[2026-03-18 21:33:12,213] [INFO] [27] [UPLOAD] Original file: 'train.csv' | Saved As to: 'FILE_1e71b25d-84a3-49f1-8436-6592c6cb8507.csv'
+[2026-03-18 21:33:12,240] [INFO] [37] File uploaded successfully: FILE_1e71b25d-84a3-49f1-8436-6592c6cb8507.csv
+[2026-03-18 21:33:12,242] [INFO] [37] [UPLOAD] STEP 1 — Reading Excel file into DataTable...
+[2026-03-18 21:33:13,924] [INFO] [27] [JOB] === Hangfire job started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:33:13,925] [INFO] [8] [JOB] === Hangfire job started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:33:13,945] [INFO] [27] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue count: 1
+[2026-03-18 21:33:13,963] [INFO] [27] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue='default' | Length=0
+[2026-03-18 21:33:13,948] [INFO] [8] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue count: 1
+[2026-03-18 21:33:14,023] [INFO] [27] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:33:14,037] [INFO] [8] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue='default' | Length=0
+[2026-03-18 21:33:14,039] [INFO] [27] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:33:14,043] [INFO] [8] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:33:14,085] [INFO] [8] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:33:14,487] [ERROR] [37] Error: System.IO.FileFormatException: File contains corrupted data.
+   at System.IO.Packaging.ZipPackage..ctor(Stream s, FileMode packageFileMode, FileAccess packageFileAccess)
+   at System.IO.Packaging.Package.Open(Stream stream, FileMode packageMode, FileAccess packageAccess)
+   at DocumentFormat.OpenXml.Features.StreamPackageFeature.InitializePackage(Nullable`1 mode, Nullable`1 access)
+   at DocumentFormat.OpenXml.Features.StreamPackageFeature..ctor(Stream stream, PackageOpenMode openMode, Boolean isOwned)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, Stream stream, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, Stream stream, Boolean isEditing)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream stream, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream stream, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(Stream stream)
+   at ClosedXML.Excel.XLWorkbook.Load(Stream stream)
+   at ClosedXML.Excel.XLWorkbook..ctor(Stream stream, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(Stream stream)
+   at Hangfire.Controllers.HomeController.ReadExcelToDataTable(IFormFile file, String originalFileName, String newFileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 263
+   at Hangfire.Controllers.HomeController.Upload(IFormFile file) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 82
+[2026-03-18 21:33:19,062] [INFO] [43] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:33:19,064] [INFO] [43] [BATCH] === RunBatch started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:33:19,067] [INFO] [43] [BATCH] Fetching DB record for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:33:19,069] [INFO] [43] [BATCH] Fetching staging records for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:33:19,157] [INFO] [42] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:33:19,203] [ERROR] [43] [BATCH] === RunBatch FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' after 0.1s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:33:19,207] [INFO] [42] [BATCH] === RunBatch started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:33:19,349] [INFO] [42] [BATCH] Fetching DB record for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:33:19,500] [INFO] [42] [BATCH] Fetching staging records for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:33:19,499] [ERROR] [43] [JOB] === Hangfire job FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:33:19,641] [ERROR] [42] [BATCH] === RunBatch FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' after 0.3s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:33:20,002] [ERROR] [42] [JOB] === Hangfire job FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:33:20,151] [WARN] [Worker #2] Failed to process the job '14': an exception occurred. Retry attempt 2 of 3 will be performed in 00:00:30.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:33:20,230] [WARN] [Worker #1] Failed to process the job '11': an exception occurred. Retry attempt 2 of 3 will be performed in 00:00:52.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:33:20,265] [INFO] [40] [JOB] === Hangfire job started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:33:20,284] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue count: 1
+[2026-03-18 21:33:20,286] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue='default' | Length=1
+[2026-03-18 21:33:20,289] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Enqueued jobs (default, top 10): 1
+[2026-03-18 21:33:20,291] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] JobId='12' | State='Enqueued' | Created='18-03-2026 16:03:17'
+[2026-03-18 21:33:20,293] [INFO] [40] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:33:20,370] [INFO] [40] [JOB] === Hangfire job started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:33:20,376] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue count: 1
+[2026-03-18 21:33:20,378] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue='default' | Length=0
+[2026-03-18 21:33:20,380] [INFO] [40] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:33:20,382] [INFO] [40] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:33:25,295] [INFO] [41] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:33:25,297] [INFO] [41] [BATCH] === RunBatch started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:33:25,300] [INFO] [41] [BATCH] Fetching DB record for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:33:25,301] [INFO] [41] [BATCH] Fetching staging records for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:33:25,390] [ERROR] [41] [BATCH] === RunBatch FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' after 0.1s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:33:25,406] [INFO] [36] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:33:25,495] [INFO] [36] [BATCH] === RunBatch started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:33:25,535] [INFO] [36] [BATCH] Fetching DB record for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:33:25,575] [ERROR] [41] [JOB] === Hangfire job FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:33:25,576] [INFO] [36] [BATCH] Fetching staging records for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:33:25,764] [ERROR] [36] [BATCH] === RunBatch FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' after 0.2s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:33:25,990] [ERROR] [36] [JOB] === Hangfire job FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:33:26,105] [WARN] [Worker #2] Failed to process the job '13': an exception occurred. Retry attempt 2 of 3 will be performed in 00:00:18.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:33:26,188] [WARN] [Worker #1] Failed to process the job '12': an exception occurred. Retry attempt 2 of 3 will be performed in 00:00:26.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:33:26,999] [INFO] [39] === [UPLOAD] datasubmit_Click triggered ===
+[2026-03-18 21:33:27,008] [INFO] [39] [HANGFIRE-MONITOR | PRE-UPLOAD] Queue count: 0
+[2026-03-18 21:33:27,010] [INFO] [39] [HANGFIRE-MONITOR | PRE-UPLOAD] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:33:27,013] [INFO] [39] [UPLOAD] Original file: 'train.csv' | Saved As to: 'FILE_a6b72aff-ab32-4b31-a777-1be3d474e8ea.csv'
+[2026-03-18 21:33:27,034] [INFO] [42] File uploaded successfully: FILE_a6b72aff-ab32-4b31-a777-1be3d474e8ea.csv
+[2026-03-18 21:33:27,037] [INFO] [42] [UPLOAD] STEP 1 — Reading Excel file into DataTable...
+[2026-03-18 21:33:27,357] [ERROR] [42] Error: System.IO.FileFormatException: File contains corrupted data.
+   at System.IO.Packaging.ZipPackage..ctor(Stream s, FileMode packageFileMode, FileAccess packageFileAccess)
+   at System.IO.Packaging.Package.Open(Stream stream, FileMode packageMode, FileAccess packageAccess)
+   at DocumentFormat.OpenXml.Features.StreamPackageFeature.InitializePackage(Nullable`1 mode, Nullable`1 access)
+   at DocumentFormat.OpenXml.Features.StreamPackageFeature..ctor(Stream stream, PackageOpenMode openMode, Boolean isOwned)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, Stream stream, PackageOpenMode mode)
+   at DocumentFormat.OpenXml.Builder.OpenXmlPackageBuilderExtensions.Open[TPackage](IPackageFactory`1 builder, Stream stream, Boolean isEditing)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream stream, Boolean isEditable, OpenSettings openSettings)
+   at DocumentFormat.OpenXml.Packaging.SpreadsheetDocument.Open(Stream stream, Boolean isEditable)
+   at ClosedXML.Excel.XLWorkbook.LoadSheets(Stream stream)
+   at ClosedXML.Excel.XLWorkbook.Load(Stream stream)
+   at ClosedXML.Excel.XLWorkbook..ctor(Stream stream, LoadOptions loadOptions)
+   at ClosedXML.Excel.XLWorkbook..ctor(Stream stream)
+   at Hangfire.Controllers.HomeController.ReadExcelToDataTable(IFormFile file, String originalFileName, String newFileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 263
+   at Hangfire.Controllers.HomeController.Upload(IFormFile file) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 82
+[2026-03-18 21:33:56,296] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:33:56,299] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue count: 1
+[2026-03-18 21:33:56,301] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue='default' | Length=0
+[2026-03-18 21:33:56,302] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:33:56,304] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:34:01,303] [INFO] [43] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:34:01,304] [INFO] [43] [BATCH] === RunBatch started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:34:01,306] [INFO] [43] [BATCH] Fetching DB record for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:34:01,307] [INFO] [43] [BATCH] Fetching staging records for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:34:01,357] [ERROR] [43] [BATCH] === RunBatch FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' after 0.1s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:34:01,460] [ERROR] [43] [JOB] === Hangfire job FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:34:01,551] [WARN] [Worker #2] Failed to process the job '13': an exception occurred. Retry attempt 3 of 3 will be performed in 00:01:13.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:34:11,400] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:34:11,405] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue count: 1
+[2026-03-18 21:34:11,407] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue='default' | Length=1
+[2026-03-18 21:34:11,408] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Enqueued jobs (default, top 10): 1
+[2026-03-18 21:34:11,409] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] JobId='12' | State='Enqueued' | Created='18-03-2026 16:04:03'
+[2026-03-18 21:34:11,410] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:34:14,708] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:34:14,710] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue count: 1
+[2026-03-18 21:34:14,712] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue='default' | Length=0
+[2026-03-18 21:34:14,712] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:34:14,713] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:34:16,418] [INFO] [32] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:34:16,419] [INFO] [32] [BATCH] === RunBatch started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:34:16,420] [INFO] [32] [BATCH] Fetching DB record for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:34:16,421] [INFO] [32] [BATCH] Fetching staging records for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:34:16,468] [ERROR] [32] [BATCH] === RunBatch FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' after 0.0s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:34:16,565] [ERROR] [32] [JOB] === Hangfire job FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:34:16,677] [WARN] [Worker #1] Failed to process the job '14': an exception occurred. Retry attempt 3 of 3 will be performed in 00:00:46.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:34:19,713] [INFO] [43] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:34:19,715] [INFO] [43] [BATCH] === RunBatch started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:34:19,716] [INFO] [43] [BATCH] Fetching DB record for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:34:19,717] [INFO] [43] [BATCH] Fetching staging records for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:34:19,765] [ERROR] [43] [BATCH] === RunBatch FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' after 0.0s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:34:19,863] [ERROR] [43] [JOB] === Hangfire job FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:34:19,963] [WARN] [Worker #3] Failed to process the job '12': an exception occurred. Retry attempt 3 of 3 will be performed in 00:00:40.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:34:20,005] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:34:20,009] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue count: 1
+[2026-03-18 21:34:20,011] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue='default' | Length=0
+[2026-03-18 21:34:20,012] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:34:20,014] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:34:25,013] [INFO] [43] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:34:25,015] [INFO] [43] [BATCH] === RunBatch started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:34:25,017] [INFO] [43] [BATCH] Fetching DB record for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:34:25,019] [INFO] [43] [BATCH] Fetching staging records for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:34:25,060] [ERROR] [43] [BATCH] === RunBatch FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' after 0.0s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:34:25,153] [ERROR] [43] [JOB] === Hangfire job FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:34:25,285] [WARN] [Worker #3] Failed to process the job '11': an exception occurred. Retry attempt 3 of 3 will be performed in 00:01:31.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:35:10,363] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:35:10,367] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue count: 1
+[2026-03-18 21:35:10,369] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Queue='default' | Length=1
+[2026-03-18 21:35:10,370] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] Enqueued jobs (default, top 10): 1
+[2026-03-18 21:35:10,371] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv]] JobId='12' | State='Enqueued' | Created='18-03-2026 16:05:03'
+[2026-03-18 21:35:10,372] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:35:14,907] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:35:14,925] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue count: 1
+[2026-03-18 21:35:14,926] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Queue='default' | Length=0
+[2026-03-18 21:35:14,927] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:35:14,928] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:35:15,384] [INFO] [31] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'
+[2026-03-18 21:35:15,385] [INFO] [31] [BATCH] === RunBatch started for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+[2026-03-18 21:35:15,387] [INFO] [31] [BATCH] Fetching DB record for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:35:15,388] [INFO] [31] [BATCH] Fetching staging records for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv'...
+[2026-03-18 21:35:15,437] [ERROR] [31] [BATCH] === RunBatch FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' after 0.0s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:35:15,537] [ERROR] [31] [JOB] === Hangfire job FAILED for file: 'FILE_102b4298-7443-4643-a926-48e2c5da0d80.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:35:15,658] [ERROR] [Worker #3] Failed to process the job '14': an exception occurred.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:35:19,940] [INFO] [32] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'
+[2026-03-18 21:35:19,942] [INFO] [32] [BATCH] === RunBatch started for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+[2026-03-18 21:35:19,943] [INFO] [32] [BATCH] Fetching DB record for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:35:19,944] [INFO] [32] [BATCH] Fetching staging records for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv'...
+[2026-03-18 21:35:19,983] [ERROR] [32] [BATCH] === RunBatch FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' after 0.0s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:35:20,071] [ERROR] [32] [JOB] === Hangfire job FAILED for file: 'FILE_b9c01677-3007-4898-a4a0-c3748c141e56.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:35:20,192] [ERROR] [Worker #4] Failed to process the job '12': an exception occurred.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:35:20,236] [INFO] [43] [JOB] === Hangfire job started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:35:20,240] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue count: 1
+[2026-03-18 21:35:20,242] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Queue='default' | Length=0
+[2026-03-18 21:35:20,244] [INFO] [43] [HANGFIRE-MONITOR | JOB-START [FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:35:20,245] [INFO] [43] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:35:25,257] [INFO] [31] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'
+[2026-03-18 21:35:25,259] [INFO] [31] [BATCH] === RunBatch started for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+[2026-03-18 21:35:25,261] [INFO] [31] [BATCH] Fetching DB record for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:35:25,262] [INFO] [31] [BATCH] Fetching staging records for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv'...
+[2026-03-18 21:35:25,313] [ERROR] [31] [BATCH] === RunBatch FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' after 0.1s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:35:25,424] [ERROR] [31] [JOB] === Hangfire job FAILED for file: 'FILE_a04c2c1a-700c-4913-b6a4-21f0a932246c.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:35:25,563] [ERROR] [Worker #4] Failed to process the job '13': an exception occurred.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+[2026-03-18 21:36:10,663] [INFO] [32] [JOB] === Hangfire job started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:36:10,668] [INFO] [32] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue count: 1
+[2026-03-18 21:36:10,670] [INFO] [32] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Queue='default' | Length=0
+[2026-03-18 21:36:10,672] [INFO] [32] [HANGFIRE-MONITOR | JOB-START [FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv]] Enqueued jobs (default, top 10): 0
+[2026-03-18 21:36:10,673] [INFO] [32] [JOB] Waiting 5 seconds for DB commit propagation — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:36:15,674] [INFO] [43] [JOB] Wait complete. Proceeding to batch processing — File: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'
+[2026-03-18 21:36:15,676] [INFO] [43] [BATCH] === RunBatch started for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+[2026-03-18 21:36:15,677] [INFO] [43] [BATCH] Fetching DB record for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:36:15,678] [INFO] [43] [BATCH] Fetching staging records for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv'...
+[2026-03-18 21:36:15,744] [ERROR] [43] [BATCH] === RunBatch FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' after 0.1s ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+[2026-03-18 21:36:15,868] [ERROR] [43] [JOB] === Hangfire job FAILED for file: 'FILE_2b52c1d8-488b-4595-838c-054482567ff7.csv' ===
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+[2026-03-18 21:36:15,989] [ERROR] [Worker #4] Failed to process the job '11': an exception occurred.
+System.InvalidOperationException: ORA-50029: OracleConnection.ConnectionString is invalid
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.OpenInternal(Boolean bAsync)
+   at OracleInternal.ServiceObjects.OracleConnectionInternal.Open()
+   at Oracle.ManagedDataAccess.Client.OracleConnection.Open()
+   at BatchProcessor.FetchRecordsToBeSearched(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 275
+   at BatchProcessor.ProcessFile(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\BatchProcessor.cs:line 35
+   at Hangfire.Controllers.HomeController.RunBatch(String fileName) in C:\FYJIXFINAL\UAT\Hangfire\Controllers\HomeController.cs:line 143
+   at InvokeStub_TaskAwaiter.GetResult(Object, Object, IntPtr*)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)

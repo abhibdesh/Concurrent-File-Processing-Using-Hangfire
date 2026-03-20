@@ -1,0 +1,7 @@
+[2026-03-17 16:54:35,815] [INFO] [1] Now listening on: https://localhost:7134
+[2026-03-17 16:54:35,850] [INFO] [1] Now listening on: http://localhost:5035
+[2026-03-17 16:54:35,968] [INFO] [1] Application started. Press Ctrl+C to shut down.
+[2026-03-17 16:54:35,974] [INFO] [1] Hosting environment: Development
+[2026-03-17 16:54:35,979] [INFO] [1] Content root path: C:\FYJIXFINAL\UAT\Hangfire
+[2026-03-17 16:54:38,098] [ERROR] [13] sdasd
+[2026-03-17 16:55:35,133] [ERROR] [23] sdasd
